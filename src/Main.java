@@ -8,7 +8,6 @@ public class Main {
         try {
 
             SingleLinkedList<Book> books = Books.load("BooksDatasetClean.csv", 100);
-            int i = 1;
 
 //            books.printAllData();
               String target = "10";
