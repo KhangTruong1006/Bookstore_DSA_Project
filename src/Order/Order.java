@@ -31,8 +31,9 @@ public class Order {
         while (current != null){
             Book data = current.getData();
             String title = data.getTitle();
+            String authors = data.getAuthors();
             long id = data.getId();
-            System.out.println(id +" - "+title);
+            System.out.println(id +" - "+title +" "+authors);
             current = current.getNext();
         }
     }
