@@ -34,7 +34,7 @@ public class Book {
     }
 
     public String getDetailsWithId(){
-        return String.format("Id: %d\nTitle: %s\nAuthors: %s\nDescription: %s\nCategory: %s\nPublisher: %s\nPrice: $%s\nDate: %s %s",
+        return String.format("Id: %d\nTitle: %s\nAuthors: %s\nDescription: %s\nCategory: %s\nPublisher: %s\nPrice: $%s\nDate: %s %s\n",
                 id, title, authors, description, category,
                 publisher, price, publishMonth, publishYear);
     }
@@ -64,7 +64,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return String.format("%d, %s, %s, %s, %s, %s, $%s, %s %s",
+        return String.format("Id: %d\nTitle: %s\nAuthors: %s\nDescription: %s\nCategory: %s\nPublisher: %s\nPrice: $%s\nDate: %s %s\n",
                 id, title, authors, description, category,
                 publisher, price, publishMonth, publishYear);
     }
