@@ -17,4 +17,15 @@ public class SearchBook {
         }
         return result;
     }
+
+    public static Book searchABookById(SingleLinkedList<Book> books,int id){
+        Node<Book> current = books.getFirst();
+        while (current != null){
+            if (current.getData().getId() == id){
+                return current.getData();
+            }
+            current = current.getNext();
+        }
+        return null;
+    }
 }
