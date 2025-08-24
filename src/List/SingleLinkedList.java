@@ -86,11 +86,7 @@ public class SingleLinkedList<E> {
         Node<E> current = head;
         while (current != null) {
             E data = current.getData();
-            if (data instanceof String[]) {
-                System.out.println(Arrays.toString((String[]) data));
-            } else {
-                System.out.println(data);
-            }
+            System.out.println(data);
             current = current.getNext();
         }
     }
