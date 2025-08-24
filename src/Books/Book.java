@@ -7,11 +7,11 @@ public class Book {
     private String description;
     private String category;
     private String publisher;
-    private String price; // using USD
+    private float price; // using USD
     private String publishMonth; // Publishing date (Month)
     private String publishYear;  // Publishing date (Year)
 
-    public Book(int id, String title, String authors, String description, String category, String publisher, String price, String publishMonth,String publishYear){
+    public Book(int id, String title, String authors, String description, String category, String publisher, float price, String publishMonth,String publishYear){
         this.id = id;
         this.title = title;
         this.authors = authors;
@@ -28,13 +28,13 @@ public class Book {
     }
 
     public String getDetails(){
-        return String.format("Title: %s\nAuthors: %s\nDescription: %s\nCategory: %s\nPublisher: %s\nPrice: $%s\nDate: %s %s",
+        return String.format("Title: %s\nAuthors: %s\nDescription: %s\nCategory: %s\nPublisher: %s\nPrice: $%.2f\nDate: %s %s",
                 title, authors, description, category,
                 publisher, price, publishMonth, publishYear);
     }
 
     public String getDetailsWithId(){
-        return String.format("Id: %d\nTitle: %s\nAuthors: %s\nDescription: %s\nCategory: %s\nPublisher: %s\nPrice: $%s\nDate: %s %s\n",
+        return String.format("Id: %d\nTitle: %s\nAuthors: %s\nDescription: %s\nCategory: %s\nPublisher: %s\nPrice: $%.2f\nDate: %s %s\n",
                 id, title, authors, description, category,
                 publisher, price, publishMonth, publishYear);
     }
@@ -58,13 +58,13 @@ public class Book {
         return publisher;
     }
 
-    public String getPrice() {
+    public float getPrice() {
         return price;
     }
 
     @Override
     public String toString() {
-        return String.format("Id: %d\nTitle: %s\nAuthors: %s\nDescription: %s\nCategory: %s\nPublisher: %s\nPrice: $%s\nDate: %s %s\n",
+        return String.format("Id: %d\nTitle: %s\nAuthors: %s\nDescription: %s\nCategory: %s\nPublisher: %s\nPrice: $%.2f\nDate: %s %s\n",
                 id, title, authors, description, category,
                 publisher, price, publishMonth, publishYear);
     }
