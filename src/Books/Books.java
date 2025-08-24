@@ -6,6 +6,11 @@ import Node.Node;
 import java.io.*;
 
 public class Books {
+    private SingleLinkedList<Book> books;
+
+    public Books(String csvFile,int limit) throws IOException{
+        this.books = load(csvFile,limit);
+    }
     public static SingleLinkedList<Book> load(String csvFile,int limit) throws IOException {
         SingleLinkedList<Book> books = new SingleLinkedList<>();
         BufferedReader reader = null;
@@ -42,5 +47,16 @@ public class Books {
             }
         }
         return books;
+    }
+
+    public Book searchABookById(int id){
+        Node<Book> current = books.getFirst();
+        while (current != null){
+            if (current.getData().getId() == id){
+                return current.getData();
+            }
+            current = current.getNext();
+        }
+        return null;
     }
 }
