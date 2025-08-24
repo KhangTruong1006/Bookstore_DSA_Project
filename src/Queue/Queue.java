@@ -38,9 +38,9 @@ public class Queue<E> {
         return oldNode.getData();
     }
 
-    public E peekFront(){
+    public Node<E> peekFront(){
         ensureNotEmpty();
-        return this.front.getData();
+        return this.front;
     }
 
     public E peekRear(){
