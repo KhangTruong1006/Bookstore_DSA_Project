@@ -30,11 +30,12 @@ public class Stack<E> {
     }
 
     public E peek(){
+        ensureNotEmpty();
         return top.getData();
     }
 
     public boolean isEmpty(){
-        return (top == null);
+        return (size == 0);
     }
 
     public int size(){
