@@ -25,7 +25,7 @@ public class Queue<E> {
         size++;
     }
 
-    public Node<E> pull(){
+    public E pull(){
         ensureNotEmpty();
         Node<E> oldNode = front;
         front = front.getNext();
@@ -35,7 +35,7 @@ public class Queue<E> {
         }
         size --;
         oldNode.setNext(null);
-        return oldNode;
+        return oldNode.getData();
     }
 
     public E peekFront(){
