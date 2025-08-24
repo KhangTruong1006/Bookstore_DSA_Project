@@ -34,7 +34,7 @@ public class Books {
                 String pubYear     = row.length > 7 ? row[7].trim() : "";
 
                 Book book = new Book(i, title, authors, description,
-                        category, publisher, price,
+                        category, publisher, Float.parseFloat(price),
                         pubMonth, pubYear);
 
                 books.addLast(book);
