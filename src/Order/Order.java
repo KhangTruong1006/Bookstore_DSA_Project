@@ -26,20 +26,19 @@ public class Order {
         this.status = status;
     }
 
-    public void printBookTitlesAndId(){
+    public void printBookTitleAndAuthors(){
         Node<Book> current = book_list.getFirst();
         while (current != null){
             Book data = current.getData();
             String title = data.getTitle();
             String authors = data.getAuthors();
-            long id = data.getId();
-            System.out.println(id +" - "+title +" "+authors);
+            System.out.println(title +" "+authors);
             current = current.getNext();
         }
     }
 
     public String getDetails() {
-        return String.format("Id: %d\nName: %s\nAddress: %s\nStatus: %s\nQuantity: %d\nPrice: $%.2f\nBooks:",
+        return String.format("Order #%d\nName: %s\nAddress: %s\nStatus: %s\nQuantity: %d\nPrice: $%.2f\nBooks:",
                 id, customer_name, address, status, book_quantity, total);
     }
 
