@@ -38,6 +38,10 @@ public class Book {
                 id, title, authors, description, category,
                 publisher, price, publishMonth, publishYear);
     }
+
+    public String getTitleAndAuthor(){
+        return String.format("%s %s", title, authors);
+    }
     public String getTitle() {
         return title;
     }
