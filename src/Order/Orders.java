@@ -21,10 +21,16 @@ public class Orders {
         return quantity;
     }
 
+    public Node<Order> getFirst(){
+        return orders.peekFront();
+    }
+
     public void printOrders(){
         Node<Order> current = orders.peekFront();
         while (current != null){
             System.out.println(current.getData().getDetails());
+            current.getData().printBookTitleAndAuthors();
+            System.out.println();
             current = current.getNext();
         }
     }
