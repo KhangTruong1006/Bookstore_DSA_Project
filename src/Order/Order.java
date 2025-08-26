@@ -3,7 +3,7 @@ import Books.*;
 import Node.*;
 import List.*;
 
-public class Order {
+public class Order implements AbstractOrder {
     private int id;
     private String customer_name;
     private String address;
@@ -46,7 +46,7 @@ public class Order {
         return id;
     }
 
-    public String getCustomer_name(){
+    public String getCustomerName(){
         return customer_name;
     }
 
@@ -54,9 +54,13 @@ public class Order {
         return address;
     }
 
+    public String getStatus(){return status;}
+
     public int getBook_quantity(){
         return book_quantity;
     }
+
+    public float getTotal(){return total;}
 
     public SingleLinkedList<Book> getBook_list() {
         return book_list;
