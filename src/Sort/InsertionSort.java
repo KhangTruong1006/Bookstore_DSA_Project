@@ -11,14 +11,12 @@ public class InsertionSort {
         ID, TITLE, AUTHOR
     }
 
-    // Sort the books inside a customer's order
     public static void sortOrderBooks(Order order, SortBy sortBy) {
         if (order == null || order.getBook_list() == null) return;
         sort(order.getBook_list(), sortBy);
     }
 
-    // Generic sorting method for any Book list
-    public static void sort(SingleLinkedList<Book> list, SortBy sortBy) {
+    private static void sort(SingleLinkedList<Book> list, SortBy sortBy) {
         if (list == null || list.size() <= 1) return;
 
         Node<Book> sorted = null;
