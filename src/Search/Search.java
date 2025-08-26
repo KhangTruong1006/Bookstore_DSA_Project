@@ -7,17 +7,16 @@ import Queue.Queue;
 
 // Searching book will use linear search
 public class Search {
-    public static SingleLinkedList<Book> searchBooks(SingleLinkedList<Book> books,String target){
+    public static void searchBooks(SingleLinkedList<Book> books,String target){
         Node<Book> current = books.getFirst();
-        SingleLinkedList<Book> result = new SingleLinkedList<>();
         while(current != null){
             Book book = current.getData();
             if(book.getDetails().contains(target)){
-                result.addFirst(book);
+                System.out.println(book.getDetails());
             }
             current = current.getNext();
         }
-        return result;
+        return;
     }
 
     public static Book searchABookById(SingleLinkedList<Book> books,int id){
@@ -33,16 +32,28 @@ public class Search {
 
     public static void searchOrderByName(Orders orders, String customer){
         Node<Order> current = orders.getFirst();
-//        SingleLinkedList<Order> result = new SingleLinkedList<>();
         while(current != null){
             Order order = current.getData();
-            if(order.getCustomer_name().contains(customer)){
+            if(order.getCustomerName().contains(customer)){
                 System.out.println(order);
                 order.printBookTitleAndAuthors();
             }
             current = current.getNext();
         }
         System.out.println("No order found");
-        return ;
+    }
+
+    public static void searchOrderById(Orders orders, int id){
+        Node<Order> current = orders.getFirst();
+        while(current != null){
+            Order order = current.getData();
+            if(order.getId()== id){
+                System.out.println(order);
+                order.printBookTitleAndAuthors();
+                return;
+            }
+            current = current.getNext();
+        }
+        System.out.println("No order found");
     }
 }
