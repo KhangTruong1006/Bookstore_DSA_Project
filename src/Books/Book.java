@@ -28,12 +28,6 @@ public class Book {
     }
 
     public String getDetails(){
-        return String.format("Title: %s\nAuthors: %s\nDescription: %s\nCategory: %s\nPublisher: %s\nPrice: $%.2f\nDate: %s %s",
-                title, authors, description, category,
-                publisher, price, publishMonth, publishYear);
-    }
-
-    public String getDetailsWithId(){
         return String.format("Id: %d\nTitle: %s\nAuthors: %s\nDescription: %s\nCategory: %s\nPublisher: %s\nPrice: $%.2f\nDate: %s %s\n",
                 id, title, authors, description, category,
                 publisher, price, publishMonth, publishYear);
