@@ -16,7 +16,7 @@ public class MergeSort {
     }
 
     private static void sort(SingleLinkedList<Book> list,SortBy sortBy){
-        if (list == null || list.size() < 1){
+        if (list == null || list.isEmpty()){
             return;
         }
         Node<Book> newHead = mergeSort(list.getFirst(),sortBy);
