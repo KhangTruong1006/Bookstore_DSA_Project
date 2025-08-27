@@ -16,18 +16,18 @@ public class Search {
             }
             current = current.getNext();
         }
-        return;
+        System.out.println("No book found");
     }
 
-    public static Book searchABookById(SingleLinkedList<Book> books,int id){
+    public static void searchABookById(SingleLinkedList<Book> books,int id){
         Node<Book> current = books.getFirst();
         while (current != null){
             if (current.getData().getId() == id){
-                return current.getData();
+                System.out.println(current.getData().getDetails());
             }
             current = current.getNext();
         }
-        return null;
+        System.out.println("No book found");
     }
 
     public static void searchOrderByName(Orders orders, String customer){
