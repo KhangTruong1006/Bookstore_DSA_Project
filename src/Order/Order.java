@@ -38,7 +38,7 @@ public class Order implements AbstractOrder {
     }
 
     public String getDetails() {
-        return String.format("Order #%d\nName: %s\nAddress: %s\nStatus: %s\nQuantity: %d\nPrice: $%.2f\nBooks:",
+        return String.format("Order #%d\nName: %s\nAddress: %s\nStatus: %s\nQuantity: %d\nPrice: $%.2f\n",
                 id, customer_name, address, status, book_quantity, total);
     }
 
@@ -78,7 +78,7 @@ public class Order implements AbstractOrder {
 
     @Override
     public String toString() {
-        return String.format("Id: %d\nName: %s\nAddress: %s\nStatus: %s\nQuantity: %d\nPrice: $%.2f\nBooks:",
+        return String.format("Order #%d\nName: %s\nAddress: %s\nStatus: %s\nQuantity: %d\nPrice: $%.2f\nBooks:",
                 id, customer_name, address, status, book_quantity, total);
     }
 }
