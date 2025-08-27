@@ -37,6 +37,7 @@ public class Search {
             if(order.getCustomerName().contains(customer)){
                 System.out.println(order);
                 order.printBookTitleAndAuthors();
+                System.out.println();
             }
             current = current.getNext();
         }
@@ -54,6 +55,5 @@ public class Search {
             }
             current = current.getNext();
         }
-        System.out.println("No order found");
     }
 }
