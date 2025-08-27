@@ -11,7 +11,7 @@ public class Books {
     public Books(String csvFile,int limit) throws IOException{
         this.books = load(csvFile,limit);
     }
-    public static SingleLinkedList<Book> load(String csvFile,int limit) throws IOException {
+    private static SingleLinkedList<Book> load(String csvFile,int limit) throws IOException {
         SingleLinkedList<Book> books = new SingleLinkedList<>();
         BufferedReader reader = null;
         String separator = ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)";
@@ -49,7 +49,7 @@ public class Books {
         return books;
     }
 
-    public Book searchABookById(int id){
+    public Book GetBookById(int id){
         Node<Book> current = books.getFirst();
         while (current != null){
             if (current.getData().getId() == id){
