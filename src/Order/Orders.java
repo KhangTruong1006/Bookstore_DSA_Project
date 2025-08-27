@@ -28,7 +28,7 @@ public class Orders {
     public void printOrders(){
         Node<Order> current = orders.peekFront();
         while (current != null){
-            System.out.println(current.getData().getDetails());
+            System.out.println(current.getData());
             current.getData().printBookTitleAndAuthors();
             System.out.println();
             current = current.getNext();
