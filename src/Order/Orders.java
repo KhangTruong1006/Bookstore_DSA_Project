@@ -17,6 +17,13 @@ public class Orders {
         quantity++;
     }
 
+    public Order removeOrder(){
+        Order oldOrder = orders.pull();
+        oldOrder.setStatus("Received");
+        quantity--;
+        return oldOrder;
+    }
+
     public int getQuantity(){
         return quantity;
     }
