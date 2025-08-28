@@ -41,7 +41,6 @@ public class Search {
             }
             current = current.getNext();
         }
-        System.out.println("No order found");
     }
 
     public static void searchOrderById(Orders orders, int id){
